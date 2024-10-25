@@ -62,7 +62,6 @@ def accounts(graph: bool, repl: bool, df: bool, debug: bool) -> None:
         if df:
             snapshots = cleaned_snapshots_df()
         else:
-            # TODO(sean): fix timestamp
             snapshots = list(cleaned_snapshots())  # type: ignore[assignment,arg-type]
         IPython.embed()
         sys.exit(0)

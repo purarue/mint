@@ -1,6 +1,6 @@
 ## mint
 
-Wrapper script/code to interact with [`mintable`](https://github.com/kevinschaich/mintable/). I use this as part of my personal [HPI](https://github.com/seanbreckenridge/HPI-personal) modules
+Wrapper script/code to interact with [`mintable`](https://github.com/kevinschaich/mintable/). I use this as part of my personal [HPI](https://github.com/purarue/HPI-personal) modules
 
 Requires:
 
@@ -14,11 +14,11 @@ I use [`plaid`](http://plaid.com/) to get the account information, and export th
 
 `./mint setup` prompts me to setup any accounts, and sets up a git-tracked data directory for my account balances/transactions.
 
-For the `csv-export-setup` step of `./mint setup`, where `<THIS_DIR>` is the absolute path to this repo on my file system; I enter: `/home/sean/data/mint/transactions.csv` and `/home/sean/data/mint/data/balances.csv`. Then, should set `MINT_DATA="${HOME}/data/mint"` to point the python code at that as your data source.
+For the `csv-export-setup` step of `./mint setup`, where `<THIS_DIR>` is the absolute path to this repo on my file system; I enter: `/home/username/data/mint/transactions.csv` and `/home/username/data/mint/data/balances.csv`. Then, should set `MINT_DATA="${HOME}/data/mint"` to point the python code at that as your data source.
 
 After `./mint fetch`, if the data directory has untracked changes, it adds a commit to the local git repo, so that I never lose any of the data, when `plaid` stops returning old transactions.
 
-I run `./mint fetch` is run in the background once [every few hours](https://github.com/seanbreckenridge/HPI/blob/master/jobs/linux/mint.job)
+I run `./mint fetch` is run in the background once [every few hours](https://github.com/purarue/HPI/blob/master/jobs/linux/mint.job)
 
 ---
 
@@ -45,7 +45,7 @@ This:
 To install as an editable package (so changes to the code/filters/transforms immediately update):
 
 ```
-git clone https://github.com/seanbreckenridge/mint && cd ./mint/budget
+git clone https://github.com/purarue/mint && cd ./mint/budget
 pip install -e .
 python3 -m budget
 ```

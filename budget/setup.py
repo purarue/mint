@@ -6,9 +6,8 @@ reqs = Path("requirements.txt").read_text().splitlines()
 setup(
     name="budget",
     version="0.1.0",
-    url="https://github.com/seanbreckenridge/mint",
-    author="Sean Breckenridge",
-    author_email="seanbrecke@gmail.com",
+    url="https://github.com/purarue/mint",
+    author="purarue",
     description=("""code to interact with/visualize mintable exports"""),
     license="MIT",
     packages=find_packages(include=["budget"]),

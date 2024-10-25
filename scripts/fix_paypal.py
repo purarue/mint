@@ -1,7 +1,7 @@
 import csv
 
 disc = []
-with open("/home/sean/Repos/mint/data/raw/paypal.csv") as f:
+with open("/home/username/Repos/mint/data/raw/paypal.csv") as f:
     cf = csv.reader(f)
     header = next(cf)
     for line in cf:
@@ -21,7 +21,7 @@ for ds in disc:
     col = [fixed_date, -1 * float(ds[7]), ds[3], acc_name, ds[4]]
     fixed_disc.append(col)
 
-with open("/home/sean/Repos/mint/data/old_transactions.csv", "a") as f:
+with open("/home/username/Repos/mint/data/old_transactions.csv", "a") as f:
     cs = csv.writer(f)
     for l in fixed_disc:
         cs.writerow(l)
